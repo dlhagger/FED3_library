@@ -43,6 +43,7 @@ void FED3::run() {
     currentHour = now.hour();       //useful for timed feeding sessions
     currentMinute = now.minute();   //useful for timed feeding sessions
     currentSecond = now.second();   //useful for timed feeding sessions
+    millisSinceMidnight = (now.hour() * 3600 + now.minute() * 60 + now.second()) * 1000;
     unixtime = now.unixtime();
     UpdateDisplay();
 }

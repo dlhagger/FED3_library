@@ -1,4 +1,4 @@
-#define VER "1.0"
+#define VER "2.0.1"
 
 #ifndef FED3_H
 #define FED3_H
@@ -207,6 +207,7 @@ public:
     unsigned long currentMinute;
     unsigned long currentSecond;
     unsigned long displayupdate;
+    unsigned millisSinceMidnight;
     String Event = "None";   //What kind of event just happened?
     
     // timing variables

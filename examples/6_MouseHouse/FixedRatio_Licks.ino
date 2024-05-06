@@ -24,11 +24,10 @@ void loop() {
     fed3.touchsensitive();
   }
 
-  if ((fed3.currentHour >= 7) & (fed3.currentMinute >= 30)) { //turn off the houselights at 7:30 am
+  if ((fed3.millisSinceMidnight >= 27000000) & (fed3.millisSinceMidnight <= 70200000)) {  //turn off the houselights of 7:30 am and pack on at 7:30 pm
     fed3.houselights(false);
   }
-
-  if ((fed3.currentHour >= 19) & (fed3.currentMinute >= 30)) { //turn on the houselights at 7:30 pm
+  else {
     fed3.houselights(true);
   }
 }
